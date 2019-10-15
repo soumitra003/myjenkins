@@ -6,8 +6,8 @@ The image also installs a docker client inside the jenkins container which uses 
 ## Usage
 
 To build the image from the Dockerfile
-'docker build -t myjenkins .'
+`docker build -t myjenkins .`
 
 To start the jenkins container
-'docker-compose up'
+`docker-compose up`
 
