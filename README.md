@@ -5,9 +5,21 @@ The image also installs a docker client inside the jenkins container which uses 
 
 ## Usage
 
-To build the image from the Dockerfile
-`docker build -t myjenkins .`
+To build the image from the Dockerfile<br/>
+```docker build -t myjenkins .```
 
-To start the jenkins container
-`docker-compose up`
+To start the jenkins container<br/>
+```docker-compose up -d```
 
+The image is also pushed to docker hub at soumitra003/myjenkins. You can update the `docker-compose.yml` to use that image.
+```yml
+# docker-compose.yml
+version: '3'
+services:
+  jenkins:
+    container_name: 'myjenkins'
+    image: 'soumitra003/myjenkins'
+    build:
+      context: .
+      dockerfile: Dockerfile
+```
